@@ -1,0 +1,129 @@
+! NFL Current Roster Goggle
+! Name: NFL Current Roster Filter
+! Description: Prioritizes current NFL roster information and recent player stats while filtering out outdated historical data
+! Author: redbullron
+! Avatar: https://avatars.githubusercontent.com/u/114375202?v=4
+! License: MIT
+! Homepage: https://github.com/redbullron/nfl-current-roster-goggle
+! Issues: https://github.com/redbullron/nfl-current-roster-goggle/issues
+! Version: 1.0.0
+
+! === BOOST TRUSTED CURRENT SPORTS SOURCES ===
+! Official NFL and trusted sports sites with current rosters
+$boost=15,site=nfl.com
+$boost=15,site=espn.com
+$boost=12,site=profootballfocus.com
+$boost=10,site=fantasypros.com
+$boost=10,site=pro-football-reference.com
+$boost=8,site=cbssports.com
+$boost=8,site=nbcsports.com
+$boost=8,site=foxsports.com
+$boost=7,site=bleacherreport.com
+$boost=7,site=theringer.com
+$boost=6,site=si.com
+$boost=6,site=usatoday.com
+
+! === BOOST CURRENT SEASON CONTENT ===
+! Prioritize 2025 season content heavily
+$boost=20,inurl:2025
+$boost=15,inurl:"2025 season"
+$boost=12,inurl:"2025 nfl"
+$boost=10,inurl:"current roster"
+$boost=10,inurl:"active roster"
+$boost=8,inurl:"depth chart"
+$boost=8,inurl:"starting lineup"
+
+! === BOOST RECENT DATES AND CURRENT CONTENT ===
+! Boost content from recent months
+$boost=8,inurl:september
+$boost=8,inurl:october
+$boost=8,inurl:november
+$boost=8,inurl:december
+$boost=6,inurl:"week 1"
+$boost=6,inurl:"week 2"
+$boost=6,inurl:"week 3"
+$boost=6,inurl:"week 4"
+
+! === BOOST FANTASY FOOTBALL CURRENT INFO ===
+! Current fantasy relevant content
+$boost=8,inurl:"fantasy football"
+$boost=8,inurl:"fantasy points"
+$boost=6,inurl:"start sit"
+$boost=6,inurl:"waiver wire"
+$boost=6,inurl:"player rankings"
+
+! === DOWNRANK HISTORICAL CONTENT ===
+! Reduce ranking for older seasons
+$downrank=5,inurl:2024
+$downrank=8,inurl:2023
+$downrank=12,inurl:2022
+$downrank=15,inurl:2021
+$downrank=20,inurl:2020
+$downrank=25,inurl:2019
+
+! === DOWNRANK HISTORICAL TERMS ===
+$downrank=10,inurl:"former"
+$downrank=10,inurl:"ex-"
+$downrank=8,inurl:"retired"
+$downrank=8,inurl:"career stats"
+$downrank=6,inurl:"all-time"
+$downrank=6,inurl:"history"
+
+! === EXCLUDE UNRELIABLE OR OUTDATED SOURCES ===
+! Remove sources known for outdated information
+$discard,site=wikipedia.org
+$discard,site=fandom.com
+$discard,site=wikia.com
+$discard,inurl:archive
+$discard,inurl:wayback
+$discard,inurl:cached
+$discard,site=web.archive.org
+
+! === EXCLUDE FAN SITES WITH POTENTIALLY OUTDATED ROSTERS ===
+$discard,inurl:fan
+$discard,inurl:blog
+$discard,site=reddit.com
+$discard,site=quora.com
+
+! === BOOST OFFICIAL TEAM SITES ===
+! Official team websites should have current rosters
+$boost=12,site=buffalobills.com
+$boost=12,site=miamidolphins.com
+$boost=12,site=patriots.com
+$boost=12,site=newyorkjets.com
+$boost=12,site=steelers.com
+$boost=12,site=ravens.com
+$boost=12,site=bengals.com
+$boost=12,site=browns.com
+$boost=12,site=colts.com
+$boost=12,site=titans.com
+$boost=12,site=jaguars.com
+$boost=12,site=texans.com
+$boost=12,site=chiefs.com
+$boost=12,site=chargers.com
+$boost=12,site=raiders.com
+$boost=12,site=broncos.com
+$boost=12,site=dallascowboys.com
+$boost=12,site=giants.com
+$boost=12,site=eagles.com
+$boost=12,site=commanders.com
+$boost=12,site=packers.com
+$boost=12,site=bears.com
+$boost=12,site=lions.com
+$boost=12,site=vikings.com
+$boost=12,site=buccaneers.com
+$boost=12,site=saints.com
+$boost=12,site=panthers.com
+$boost=12,site=falcons.com
+$boost=12,site=49ers.com
+$boost=12,site=seahawks.com
+$boost=12,site=rams.com
+$boost=12,site=azcardinals.com
+
+! === BOOST CURRENT PLAYER STATUS TERMS ===
+$boost=10,inurl:"signed"
+$boost=10,inurl:"traded"
+$boost=8,inurl:"activated"
+$boost=8,inurl:"promoted"
+$boost=6,inurl:"practice squad"
+$boost=6,inurl:"injured reserve"
